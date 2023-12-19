@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.board {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: calc(500px + 20ch);
+    height: calc(500px + 20ch);
+    border: 1px solid black;
+}
+
+#gameBoard,
+#guide {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+ 
+#gameBoard {
+    z-index: 1;
+}
+
+#guide {
+    z-index: 0; 
+}  
+
+#x {
+    width: 500px;
+    height: 20ch;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid black;
+}
+ 
+#x div:nth-child(5n + 1) {
+    border-left: 5px solid rgb(0, 0, 0);
+}
+
+#y {
+    width: 20ch;    
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 1px solid black;
+}
+
+#x div,
+#y div {
+    flex: 1;
+    border: 1px solid black;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.nBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    font-size: 1000%;
+    display: none;
+}
+
+.display {
+    display: block;
+    opacity: .0;
+    animation: displaySetting 2s ease-in-out 1s 1 forwards;
+}
+
+@keyframes displaySetting {
+    100% {
+        opacity: 1;
+    }
+}

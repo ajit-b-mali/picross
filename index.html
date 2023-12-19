@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picros</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <div class="board">
+        <canvas id="gameBoard"></canvas>
+        <canvas id="guide"></canvas>
+        <div id="x"></div>
+        <div id="y"></div>
+    </div>
+    
+    <div class="setting">
+        <h1>picross</h1>
+        <hr>
+        <label for="level">Grid: </label>
+        <select name="gridSize" id="level">
+            <option value="5">5 * 5</option>
+            <option value="10">10 * 10</option>
+            <option value="15">15 * 15</option>
+            <option value="20">20 * 20</option>
+        </select>
+        <br>
+        <button onclick="restart()">Restart</button>
+        <br>
+        <button onclick="next()" id="next" class="nBtn">Next</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
